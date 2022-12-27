@@ -1,0 +1,21 @@
+news
+	tieu chí ?
+	feedback 220
+	blog
+	chinh sach
+newsletter
+	fullname, sdt,nd
+photo
+	logo
+	banner
+	slide
+	banner2
+	video 580x400
+	social
+product
+	pro nb 1 cap
+
+static
+	gioi thieu
+	slogan header
+	gio mo cua

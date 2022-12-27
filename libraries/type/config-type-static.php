@@ -25,6 +25,12 @@
     $config['static'][$nametype]['check'] = array("hienthi" => "Hiển thị");
     $config['static'][$nametype]['name'] = true;
     
+    /* Giờ mở cửa */
+    $nametype = "opening-time";
+    $config['static'][$nametype]['title_main'] = "Giờ mở cửa";
+    $config['static'][$nametype]['check'] = array("hienthi" => "Hiển thị");
+    $config['static'][$nametype]['name'] = true;
+    
     /* Liên hệ */
     $nametype = "lienhe";
     $config['static'][$nametype]['title_main'] = "Liên hệ";
