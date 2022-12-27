@@ -590,7 +590,7 @@ NN_FRAMEWORK.peShiner = () => {
             paused: true,
             reverse: true,
             repeat: 1,
-            color: "monoHL",
+            color: "oceanHL",
         }); /*monoHL, oceanHL, fireHL*/
         api.resume();
     };
@@ -825,6 +825,7 @@ $(document).ready(function(){
     NN_FRAMEWORK.DomChange();
     NN_FRAMEWORK.TickerScroll();
     // NN_FRAMEWORK.DatePicker();
+    NN_FRAMEWORK.peShiner();
     NN_FRAMEWORK.SlickBlog();
     NN_FRAMEWORK.FlipsterVideo();
     NN_FRAMEWORK.flip();

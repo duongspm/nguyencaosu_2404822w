@@ -108,4 +108,16 @@
     $config['photo']['man_photo'][$nametype]['height_photo'] = 400;
     $config['photo']['man_photo'][$nametype]['thumb_photo'] = '580x400x1';
     $config['photo']['man_photo'][$nametype]['img_type_photo'] = '.jpg|.gif|.png|.jpeg|.gif';
+
+    /* imgabout */
+    $nametype = "image-about";
+    $config['photo']['man_photo'][$nametype]['title_main_photo'] = "Hình ảnh giới thiệu";
+    $config['photo']['man_photo'][$nametype]['check_photo'] = array("hienthi" => "Hiển thị");
+    $config['photo']['man_photo'][$nametype]['number_photo'] = 3;
+    $config['photo']['man_photo'][$nametype]['images_photo'] = true;
+    $config['photo']['man_photo'][$nametype]['avatar_photo'] = true;
+    $config['photo']['man_photo'][$nametype]['width_photo'] = 340;
+    $config['photo']['man_photo'][$nametype]['height_photo'] = 300;
+    $config['photo']['man_photo'][$nametype]['thumb_photo'] = '340x300x1';
+    $config['photo']['man_photo'][$nametype]['img_type_photo'] = '.jpg|.gif|.png|.jpeg|.gif';
 ?>

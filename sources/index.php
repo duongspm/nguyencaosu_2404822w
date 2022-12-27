@@ -12,6 +12,8 @@
     
     $slider = $cache->get("select name$lang, photo, link from #_photo where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('slide'), 'result', 7200);
     
+    $imgabout = $cache->get("select photo from #_photo where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('image-about'), 'result', 7200);
+    
     $about = $cache->get("select name$lang,desc$lang,content$lang,date_created, photo from #_static where type = ? and find_in_set('hienthi',status) order by id desc", array('gioi-thieu'), 'result', 7200);
     
     $productbc = $cache->get("select name$lang,photo,desc$lang,slugvi,slugen,regular_price, id from #_product where type = ? and find_in_set('banchay',status) and find_in_set('hienthi',status)", array('san-pham'), 'result', 7200);

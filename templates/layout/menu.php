@@ -37,7 +37,7 @@
         </ul>
         <div class="menu__search">
             <div class="search w-clear">
-                <input type="text" id="keyword" placeholder="Nhập từ khóa ..." onkeypress="doEnter(event,'keyword');" />
+                <input type="text" id="keyword" placeholder="Tìm kiếm" onkeypress="doEnter(event,'keyword');" />
                 <p onclick="onSearch('keyword');"><i class="fas fa-search"></i></p>
             </div>
         </div>
