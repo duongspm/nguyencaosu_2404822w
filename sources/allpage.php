@@ -15,6 +15,8 @@ $policy = $cache->get("select name$lang, slugvi, slugen, id from #_news where ty
 
 $footer = $cache->get("select name$lang, content$lang from #_static where type = ? limit 0,1", array('footer'), 'fetch', 7200);
 
+$opentime = $cache->get("select name$lang, content$lang from #_static where type = ? limit 0,1", array('opening-time'), 'fetch', 7200);
+
 $logo = $cache->get("select id, photo, options from #_photo where type = ? and act = ? limit 0,1", array('logo', 'photo_static'), 'fetch', 7200);
 
 $bannerheader = $cache->get("select photo from #_photo where type = ? and act = ? limit 0,1", array('banner-header', 'photo_static'), 'fetch', 7200);

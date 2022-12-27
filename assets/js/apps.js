@@ -575,18 +575,18 @@ NN_FRAMEWORK.flip = () => {
     });
 };
 
-// NN_FRAMEWORK.peShiner = () => {
-//     if ($(".peShiner").length) {
-//         var api = $(".peShiner").peShiner({
-//             api: true,
-//             paused: true,
-//             reverse: true,
-//             repeat: 1,
-//             color: "monoHL",
-//         }); /*monoHL, oceanHL, fireHL*/
-//         api.resume();
-//     };
-// };
+NN_FRAMEWORK.peShiner = () => {
+    if ($(".peShiner").length) {
+        var api = $(".peShiner").peShiner({
+            api: true,
+            paused: true,
+            reverse: true,
+            repeat: 1,
+            color: "monoHL",
+        }); /*monoHL, oceanHL, fireHL*/
+        api.resume();
+    };
+};
 /* Cart */
 NN_FRAMEWORK.Cart = function(){
     /* Add */

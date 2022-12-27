@@ -7,10 +7,10 @@ newsletter
 	fullname, sdt,nd
 photo
 	logo
-	banner
+	banner-header ??
 	slide
-	banner2
-	video 580x400
+	banner
+	video 580x	400
 	social
 product
 	pro nb 1 cap

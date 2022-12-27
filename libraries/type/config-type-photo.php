@@ -24,7 +24,6 @@
     $config['photo']['photo_static'][$nametype]['title_main'] = "Logo";
     $config['photo']['photo_static'][$nametype]['check'] = array("hienthi" => "Hiển thị");
     $config['photo']['photo_static'][$nametype]['images'] = true;
-    //Thay đổi kích thước theo hình
     $config['photo']['photo_static'][$nametype]['width'] =  185;
     $config['photo']['photo_static'][$nametype]['height'] = 100;
     $config['photo']['photo_static'][$nametype]['thumb'] = '185x100x1';
@@ -35,9 +34,9 @@
     $config['photo']['photo_static'][$nametype]['title_main'] = "Favicon";
     $config['photo']['photo_static'][$nametype]['check'] = array("hienthi" => "Hiển thị");
     $config['photo']['photo_static'][$nametype]['images'] = true;
-    $config['photo']['photo_static'][$nametype]['width'] = 50;
-    $config['photo']['photo_static'][$nametype]['height'] = 100;
-    $config['photo']['photo_static'][$nametype]['thumb'] = '50x100x1';
+    $config['photo']['photo_static'][$nametype]['width'] = 100;
+    $config['photo']['photo_static'][$nametype]['height'] = 50;
+    $config['photo']['photo_static'][$nametype]['thumb'] = '100x50x1';
     $config['photo']['photo_static'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif';
 
     /* Watermark sản phẩm*/
@@ -47,9 +46,9 @@
     $config['photo']['photo_static'][$nametype]['images'] = true;
     $config['photo']['photo_static'][$nametype]['watermark'] = true;
     $config['photo']['photo_static'][$nametype]['watermark-advanced'] = false;
-    $config['photo']['photo_static'][$nametype]['width'] = 50;
-    $config['photo']['photo_static'][$nametype]['height'] = 100;
-    $config['photo']['photo_static'][$nametype]['thumb'] = '50x100x1';
+    $config['photo']['photo_static'][$nametype]['width'] = 100;
+    $config['photo']['photo_static'][$nametype]['height'] = 50;
+    $config['photo']['photo_static'][$nametype]['thumb'] = '100x50x1';
     $config['photo']['photo_static'][$nametype]['img_type'] = '.png|.PNG|.Png';
 
     /* Slideshow */
@@ -79,7 +78,6 @@
     $config['photo']['man_photo'][$nametype]['height_photo'] = 40;
     $config['photo']['man_photo'][$nametype]['thumb_photo'] = '40x40x1';
     $config['photo']['man_photo'][$nametype]['img_type_photo'] = '.jpg|.gif|.png|.jpeg|.gif';
-
 
     /* Video */
     $nametype = "videoclipd";
