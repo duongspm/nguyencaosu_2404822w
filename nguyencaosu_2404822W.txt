@@ -1,5 +1,7 @@
+http://thietkexaydunglongkhanh.com/
+Tag từ khóa gắn link, name
 news
-	tieu chí ?
+	tieu chí
 	feedback 220
 	blog
 	chinh sach
@@ -10,7 +12,7 @@ photo
 	banner-header ??
 	slide
 	banner
-	video 580x	400
+	video 580x400
 	social
 product
 	pro nb 1 cap
@@ -19,3 +21,4 @@ static
 	gioi thieu
 	slogan header
 	gio mo cua
+

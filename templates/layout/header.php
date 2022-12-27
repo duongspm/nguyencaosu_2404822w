@@ -29,15 +29,15 @@
                 <div class="header__open">
                     <div class="header__open--time">
                         <div class="header__icon">
-                            <img src="assets/images/icon--02.png" alt="<?=$setting['name'.$lang]?>">
+                            <img src="assets/images/images/icon-open.png" alt="<?=$setting['name'.$lang]?>">
                         </div>
                         <span>
-                            <?=$opentime['name'.$lang]?>
+                            Mở cửa: <?=$opentime['name'.$lang]?>
                         </span>
                     </div>
                     <div class="header__hotline">
                         <div class="header__icon">
-                            <img src="assets/images/icon--02.png" alt="<?=$setting['name'.$lang]?>">
+                            <img src="assets/images/images/icon-phone.png" alt="<?=$setting['name'.$lang]?>">
                         </div>
                         <span>
                             Hotline:

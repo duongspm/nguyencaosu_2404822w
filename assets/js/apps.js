@@ -38,6 +38,14 @@ NN_FRAMEWORK.GoTop = function(){
         $('html, body').animate({scrollTop : 0},800);
         return false; 
     });
+    $(window).scroll(function(){
+        if($(this).scrollTop()){
+            $('.menu-list').addClass('sticky');
+        }else{
+            $('.menu-list').removeClass('sticky');
+        }
+    });
+
 };
 
 /* Paging dịch vụ ajax list*/

@@ -4,9 +4,9 @@
     $config['photo']['photo_static'][$nametype]['title_main'] = "Banner-header";
     $config['photo']['photo_static'][$nametype]['check'] = array("hienthi" => "Hiển thị");
     $config['photo']['photo_static'][$nametype]['images'] = true;
-    $config['photo']['photo_static'][$nametype]['width'] = 1366;
-    $config['photo']['photo_static'][$nametype]['height'] = 400;
-    $config['photo']['photo_static'][$nametype]['thumb'] = '1366x400x1';
+    $config['photo']['photo_static'][$nametype]['width'] = 450;
+    $config['photo']['photo_static'][$nametype]['height'] = 85;
+    $config['photo']['photo_static'][$nametype]['thumb'] = '450x85x1';
     $config['photo']['photo_static'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif';
     
     /* Banner */
@@ -77,6 +77,20 @@
     $config['photo']['man_photo'][$nametype]['width_photo'] = 40;
     $config['photo']['man_photo'][$nametype]['height_photo'] = 40;
     $config['photo']['man_photo'][$nametype]['thumb_photo'] = '40x40x1';
+    $config['photo']['man_photo'][$nametype]['img_type_photo'] = '.jpg|.gif|.png|.jpeg|.gif';
+
+    /* Doi tac*/
+    //Có nhiều cái thì thêm vào
+    $nametype = "doitac";
+    $config['photo']['man_photo'][$nametype]['title_main_photo'] = "Đố tác";
+    $config['photo']['man_photo'][$nametype]['check_photo'] = array("hienthi" => "Hiển thị");
+    $config['photo']['man_photo'][$nametype]['number_photo'] = 2;
+    $config['photo']['man_photo'][$nametype]['images_photo'] = true;
+    $config['photo']['man_photo'][$nametype]['avatar_photo'] = true;
+    $config['photo']['man_photo'][$nametype]['link_photo'] = true;
+    $config['photo']['man_photo'][$nametype]['width_photo'] = 100;
+    $config['photo']['man_photo'][$nametype]['height_photo'] = 70;
+    $config['photo']['man_photo'][$nametype]['thumb_photo'] = '100x70x1';
     $config['photo']['man_photo'][$nametype]['img_type_photo'] = '.jpg|.gif|.png|.jpeg|.gif';
 
     /* Video */
