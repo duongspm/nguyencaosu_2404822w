@@ -189,9 +189,7 @@
     <div class="wrapper">
         <div class="videofbb">
             <div class="videoo">
-
                 <div class="heading__02">
-
                     <span class="heading--02">
                         video nổi bật
                     </span>
@@ -199,6 +197,29 @@
                         <span>
                             <?=$slogan['name'.$lang]?>
                         </span>
+                    </div>
+                </div>
+                <div class="video__list">
+
+                    <div class="slider-for">
+                        <?php if(!empty($videoclipd)) { foreach($videoclipd as $k => $v) { ?>
+                        <div class="video" data-fancybox="video" data-src="<?=$v['link_video']?>">
+                            <div class="video-image scale-img">
+                                <?= $func->getImage(['class' => 'w-100', 'sizes' => '580x400x1', 'upload' => UPLOAD_PHOTO_L, 'image' => $v['photo'], 'alt' => $v['name'.$lang]]) ?>
+                            </div>
+                        </div>
+                        <?php } }?>
+                    </div>
+
+
+                    <div class="slider-nav">
+                        <?php if(!empty($videoclipd)) { foreach($videoclipd as $k => $v) { ?>
+                        <div class="video" data-fancybox="video" data-src="<?=$v['link_video']?>">
+                            <div class="video-images scale-img">
+                                <?= $func->getImage(['class' => 'w-100', 'sizes' => '180x110x1', 'upload' => UPLOAD_PHOTO_L, 'image' => $v['photo'], 'alt' => $v['name'.$lang]]) ?>
+                            </div>
+                        </div>
+                        <?php } }?>
                     </div>
 
                 </div>
@@ -247,214 +268,114 @@
     </div>
 </div>
 
-<div class="blog pd">
+<div class="blog pd-b">
     <div class="wrapper">
         <div class="blogg">
-            <div class="heading_top">
-                <div class="heading">
-                    <span>Tin tức sự kiện</span>
-                </div>
-                <div class="slogan">
+            <div class="heading__top">
+                <span class="heading heading--black">
+                    tin tức & sự kiện
+                </span>
+                <div class="heading__slogan heading__slogan--black">
+                    <div>
+                        <img src="assets/images/images/line-blue.png" alt="<?=$setting['name'.$lang]?>">
+                    </div>
                     <span>
                         <?=$slogan['name'.$lang]?>
                     </span>
-                </div>
-                <div>
-                    <img src="assets/images/line.png" alt="<?=$setting['name'.$lang]?>">
+                    <div>
+                        <img src="assets/images/images/line-blue-02.png" alt="<?=$setting['name'.$lang]?>">
+                    </div>
                 </div>
             </div>
             <div class="blog__list">
                 <?php if (!empty($newsnb)) { ?>
-                <div class="blog__right">
-                    <a class="blog__right-item" href="<?=$newsnb[0][$sluglang]?>">
-                        <div class="blog__right-img hover_sang">
-                            <?= $func->getImage(['class' => 'lazy', 'sizes' => '580x355x1', 'upload' => UPLOAD_NEWS_L, 'image' => $newsnb[0]['photo'], 'alt' => $newsnb[0]['name' . $lang]]) ?>
-                        </div>
-                        <div class="blog__right-content">
-                            <span class="blog__name">
-                                <?=$newsnb[0]['name'.$lang]?>
+                <div class="owl-page owl-carousel owl-theme" data-xsm-items="2:5" data-sm-items="3:5"
+                    data-md-items="3:15" data-lg-items="4:15" data-xlg-items="4:15" data-rewind="1" data-autoplay="0"
+                    data-loop="0" data-lazyload="0" data-mousedrag="1" data-touchdrag="1" data-smartspeed="500"
+                    data-autoplayspeed="3500" data-dots="0" data-nav="0"
+                    data-navtext="<svg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-arrow-narrow-left' width='50' height='37' viewBox='0 0 24 24' stroke-width='1' stroke='#ffffff' fill='none' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' d='M0 0h24v24H0z' fill='none'/><line x1='5' y1='12' x2='19' y2='12' /><line x1='5' y1='12' x2='9' y2='16' /><line x1='5' y1='12' x2='9' y2='8' /></svg>|<svg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-arrow-narrow-right' width='50' height='37' viewBox='0 0 24 24' stroke-width='1' stroke='#ffffff' fill='none' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' d='M0 0h24v24H0z' fill='none'/><line x1='5' y1='12' x2='19' y2='12' /><line x1='15' y1='16' x2='19' y2='12' /><line x1='15' y1='8' x2='19' y2='12' /></svg>"
+                    data-navcontainer=".control-newsnb">
+                    <?php foreach($newsnb as $v){?>
+                    <a href="<?=$v[$sluglang]?>" class="blog__item">
+                        <div class="blog__date">
+                            <span class="blog__date--date">
+                                <?=date("d",$v['date_created'])?>
                             </span>
-                            <div class="blog__right-date">
-                                <div>
-                                    <img src="assets/images/icon-blog.png" alt="<?=$newsnb[0]['name'.$lang]?>">
-                                </div>
-                                <span class="blog__right-date1"><?=date("j F Y",$newsnb[0]['date_created'])?></span>
-                                <span class="blog__right-date2">
-                                    Tin tức
-                                </span>
-                            </div>
+                            <span class="blog__date--month">
+                                Th<?=date("m",$v['date_created'])?>
+                            </span>
+                        </div>
+                        <div class="blog__img effect10">
+                            <?= $func->getImage(['class' => 'lazy w-100', 'sizes' => '270x270x1', 'upload' => UPLOAD_NEWS_L, 'image' => $v['photo'], 'alt' => $v['name'.$lang]]) ?>
+                        </div>
+                        <div class="blog__content">
+                            <span class="blog__name">
+                                <?=$v['name'.$lang]?>
+                            </span>
+                            <div class="line__blog"></div>
                             <span class="blog__desc">
                                 <?=$v['desc'.$lang]?>
                             </span>
                         </div>
                     </a>
-                </div>
-                <div class="blog__left">
-                    <div class="slickblog">
-                        <?php foreach ($newsnb as $v) { ?>
-                        <div>
-                            <a href="<?=$v[$sluglang]?>" title="<?=$v['name'.$lang]?>" class="blog__lef-item">
-                                <div class="blog__left-img hover_sang">
-                                    <?= $func->getImage(['class' => '', 'sizes' => '280x210x1', 'upload' => UPLOAD_NEWS_L, 'image' => $v['photo'], 'alt' => $v['name' . $lang]]) ?>
-                                </div>
-                                <div class="blog__left-content">
-
-                                    <span class="blog__name"> <?=$v['name'.$lang]?></span>
-                                    <div class="blog__right-date">
-                                        <span
-                                            class="blog__right-date1"><?=date("j F Y",$newsnb[0]['date_created'])?></span>
-                                        <span class="blog__right-date2">
-                                            Tin tức
-                                        </span>
-                                    </div>
-                                    <span class="blog__desc">
-                                        <?=$v['desc'.$lang]?>
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-
-                        <?php } ?>
-                    </div>
+                    <?php }?>
                 </div>
                 <?php } ?>
             </div>
         </div>
     </div>
 </div>
-<div class="albumd pd">
-    <div class="wrapper">
-        <div class="albumdd">
-            <div class="heading_top">
-                <div class="heading">
-                    <span>Album ảnh</span>
-                </div>
-                <div class="slogan">
-                    <span>
-                        <?=$slogan['name'.$lang]?>
-                    </span>
-                </div>
-                <div>
-                    <img src="assets/images/line.png" alt="<?=$setting['name'.$lang]?>">
-                </div>
-            </div>
-            <div class="albumd__list">
-                <div class="albumd__top">
-                    <?php if(count($thuvienanh)>1){ ?>
-                    <div class="albumd__item">
-                        <div class="album">
-                            <a class="album-image scale-img" href="<?=$thuvienanh[0][$sluglang]?>"
-                                title="<?=$thuvienanh[0]['name'.$lang]?>">
-                                <?=$func->getImage(['class' => 'lazy w-100', 'sizes' => '390x300x1', 'upload' => UPLOAD_PRODUCT_L, 'image' => $thuvienanh[0]['photo'], 'alt' => $thuvienanh[0]['name'.$lang]])?>
-                            </a>
-                        </div>
-                    </div>
-                    <?php } ?>
-                    <?php if(count($thuvienanh)>2){ ?>
-                    <div class="albumd__item">
-                        <div class="album">
-                            <a class="album-image scale-img" href="<?=$thuvienanh[1][$sluglang]?>"
-                                title="<?=$thuvienanh[1]['name'.$lang]?>">
-                                <?=$func->getImage(['class' => 'lazy w-100', 'sizes' => '390x300x1', 'upload' => UPLOAD_PRODUCT_L, 'image' => $thuvienanh[1]['photo'], 'alt' => $thuvienanh[1]['name'.$lang]])?>
-                            </a>
-                        </div>
-                    </div>
-                    <?php } ?>
-                    <?php if(count($thuvienanh)>3){ ?>
-                    <div class="albumd__item">
-                        <div class="album">
-                            <a class="album-image scale-img" href="<?=$thuvienanh[2][$sluglang]?>"
-                                title="<?=$thuvienanh[2]['name'.$lang]?>">
-                                <?=$func->getImage(['class' => 'lazy w-100', 'sizes' => '390x300x1', 'upload' => UPLOAD_PRODUCT_L, 'image' => $thuvienanh[2]['photo'], 'alt' => $thuvienanh[2]['name'.$lang]])?>
-                            </a>
-                        </div>
-                    </div>
-                    <?php } ?>
-                </div>
-                <div class="albumd__buttom">
-                    <?php if(count($thuvienanh)>4){ ?>
-                    <div class="albumd__item">
-                        <div class="album">
-                            <a class="album-image scale-img" href="<?=$thuvienanh[3][$sluglang]?>"
-                                title="<?=$thuvienanh[3]['name'.$lang]?>">
-                                <?=$func->getImage(['class' => 'lazy w-100', 'sizes' => '590x350x1', 'upload' => UPLOAD_PRODUCT_L, 'image' => $thuvienanh[3]['photo'], 'alt' => $thuvienanh[3]['name'.$lang]])?>
-                            </a>
-                        </div>
-                    </div>
-                    <?php } ?>
-                    <?php if(count($thuvienanh)>5){ ?>
-                    <div class="albumd__item">
-                        <div class="album">
-                            <a class="album-image scale-img" href="<?=$thuvienanh[4][$sluglang]?>"
-                                title="<?=$thuvienanh[4]['name'.$lang]?>">
-                                <?=$func->getImage(['class' => 'lazy', 'sizes' => '590x350x1', 'upload' => UPLOAD_PRODUCT_L, 'image' => $thuvienanh[4]['photo'], 'alt' => $thuvienanh[4]['name'.$lang]])?>
-                            </a>
-                        </div>
-                    </div>
-                    <?php } ?>
-                </div>
-            </div>
 
-            <?php if(!empty($thuvienanh)){?>
-            <div class="albumd__list-mobile">
-                <?php foreach($thuvienanh as $v){?>
-                <div class="albumd__mobile-item">
-                    <a class="album-image scale-img" href="<?=$v[$sluglang]?>" title="<?=$v['name'.$lang]?>">
-                        <?=$func->getImage(['class' => 'lazy w-100', 'sizes' => '390x300x1', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['photo'], 'alt' => $v['name'.$lang]])?>
-                    </a>
+<div class="dangky mr-top">
+    <div class=" wrapper">
+        <div class="dangkyy">
+            <div class="dangky__left">
+                <div class="dangky__left--icon">
+                    <img src="assets/images/images/icon-dk.png" alt="<?=$setting['name'.$lang]?>">
                 </div>
-                <?php } ?>
-
+                <span>đăng ký nhận tin</span>
             </div>
-            <?php } ?>
-
-
-            <?php if (count($thuvienanh)>5){?>
-            <div class="albumd__btn">
-                <a href="thi-vien-anh">Xem thêm công trình</a>
-            </div>
-            <?php } ?>
-        </div>
-    </div>
-</div>
-
-<div class="videoo pd">
-    <div class="wrap">
-        <div class="videoo">
-            <div class="heading_top">
-                <div class="heading">
-                    <span>Video clip</span>
-                </div>
-                <div class="slogan">
-                    <span>
-                        <?=$slogan['name'.$lang]?>
-                    </span>
-                </div>
-                <div>
-                    <img src="assets/images/line.png" alt="<?=$setting['name'.$lang]?>">
-                </div>
-            </div>
-            <?php if(!empty($videoclipd)) {?>
-            <div class="videoo__list">
-                <div class="flipstervideo">
-                    <ul>
-                        <?php foreach($videoclipd as $v){?>
-                        <li class="viddeoo__item">
-                            <div class="video" data-fancybox="video" data-src="<?=$v['link_video']?>">
-                                <div class="video-image scale-img">
-                                    <?=$func->getImage(['class' => '', 'sizes' => '635x308x1', 'upload' => UPLOAD_PHOTO_L, 'image' => $v['photo'], 'alt' => $v['name'.$lang]])?>
-                                </div>
-                                <div class="video__info">
-                                    <span class="video__name"><?=$v['name'.$lang]?></span>
-                                    <span class="video__desc"><?=$v['desc'.$lang]?></span>
-                                </div>
+            <div class="dangky__right">
+                <form class="validation-newsletter" novalidate method="post" action="" enctype="multipart/form-data">
+                    <div class="dangky__form">
+                        <div class="newsletter-input">
+                            <div class="dk-icon">
+                                <img src="assets/images/images/icon-dk01.png" alt="">
                             </div>
-                        </li>
-                        <?php }?>
-                    </ul>
-                </div>
+                            <input type="text" class="form-controld form-d1 text-sm" id="fullname-newsletter"
+                                name="dataNewsletter[fullname]" placeholder="Tên của bạn" required />
+                            <div class="invalid-tooltip">Vui lòng nhập tên của bạn</div>
+                        </div>
+
+                        <div class="newsletter-input">
+                            <div class="dk-icon">
+                                <img src="assets/images/images/icon-dk-02.png" alt="">
+                            </div>
+                            <input type="number" class="form-controld form-d1 text-sm" id="phone-newsletter"
+                                name="dataNewsletter[phone]" placeholder="Số điện thoại" required />
+                            <div class="invalid-tooltip">Vui lòng nhập số điện thoại</div>
+                        </div>
+
+                        <div class="newsletter-input">
+                            <div class="dk-icon">
+                                <img src="assets/images/images/icon-dk-03.png" alt="">
+                            </div>
+                            <input class="form-controld text-sm" id="content-newsletter" name="dataNewsletter[content]"
+                                placeholder="Nội dung" required></input>
+                            <div class="invalid-tooltip">Vui lòng nhập nội dung</div>
+                        </div>
+
+                        <div class="formgroup">
+                            <div class="newsletter-button">
+                                <input type="submit" class="btn-f" name="submit-newsletter" value="GỬI" disabled>
+                                <input type="hidden" class="btn btn-sm btn-danger w-100"
+                                    name="recaptcha_response_newsletter" id="recaptchaResponseNewsletter">
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
             </div>
-            <?php }?>
         </div>
     </div>
 </div>

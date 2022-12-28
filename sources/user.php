@@ -131,10 +131,10 @@
 					$response['messages'][] = 'Ngày sinh không hợp lệ';
 				}
 
-				if(empty($email))
-				{
-					$response['messages'][] = 'Email không được trống';
-				}
+				// if(empty($email))
+				// {
+				// 	$response['messages'][] = 'Email không được trống';
+				// }
 
 				if(!empty($email))
 				{

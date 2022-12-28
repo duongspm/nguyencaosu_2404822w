@@ -22,6 +22,9 @@ $logo = $cache->get("select id, photo, options from #_photo where type = ? and a
 $bannerheader = $cache->get("select photo from #_photo where type = ? and act = ? limit 0,1", array('banner-header', 'photo_static'), 'fetch', 7200);
 
 $productlist = $cache->get("select name$lang, slugvi, slugen, id from #_product_list where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc", array('san-pham'), 'result', 7200);
+
+$tag = $cache->get("select name$lang, desc$lang, id from #_news where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('tag'), 'result', 7200);
+
 // need
 
 /* Get statistic */
@@ -38,9 +41,9 @@ if (!empty($_POST['submit-newsletter'])) {
     $dataNewsletter = (!empty($_POST['dataNewsletter'])) ? $_POST['dataNewsletter'] : null;
 
     /* Valid data */
-    if (empty($dataNewsletter['email'])) {
-        $flash->set('error', 'Email không được trống');
-    }
+    // if (empty($dataNewsletter['email'])) {
+    //     $flash->set('error', 'Email không được trống');
+    // }
 
     if (!empty($dataNewsletter['email']) && !$func->isEmail($dataNewsletter['email'])) {
         $flash->set('error', 'Email không hợp lệ');

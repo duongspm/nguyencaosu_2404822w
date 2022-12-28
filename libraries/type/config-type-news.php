@@ -59,6 +59,13 @@
     $config['news'][$nametype]['thumb'] = '55x51x1';
     $config['news'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif';
 
+    /* Chính sách có thì giữ, không thì xóa*/
+    $nametype = "tag";
+    $config['news'][$nametype]['title_main'] = "Tag";
+    $config['news'][$nametype]['check'] = array("hienthi" => "Hiển thị");
+    $config['news'][$nametype]['copy'] = true;
+    $config['news'][$nametype]['desc'] = true;
+
     /* -------------- */
 
     /* Quản lý mục (Không cấp) */

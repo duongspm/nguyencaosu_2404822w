@@ -62,6 +62,26 @@ NN_FRAMEWORK.loadPagingListService = function () {
         );
     });
 };
+NN_FRAMEWORK.Slickvideo = function(){
+    $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.slider-nav'
+    });
+    $('.slider-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        asNavFor: '.slider-for',
+        vertical: true,
+        verticalSwiping: true,
+
+        loop: true
+    });
+};
 /* Paging ajax list*/
 NN_FRAMEWORK.loadPagingList = function () {
     loadPaging("api/product.php?perpage=8", ".paging-product-list", 0);
@@ -817,6 +837,7 @@ $(document).ready(function(){
     NN_FRAMEWORK.Menu();
     NN_FRAMEWORK.OwlPage();
     NN_FRAMEWORK.Pagings();
+    NN_FRAMEWORK.Slickvideo();
     // NN_FRAMEWORK.Cart();
     NN_FRAMEWORK.Videos();
     NN_FRAMEWORK.Photobox();
