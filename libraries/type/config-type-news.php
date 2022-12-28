@@ -61,7 +61,7 @@
 
     /* Chính sách có thì giữ, không thì xóa*/
     $nametype = "tag";
-    $config['news'][$nametype]['title_main'] = "Tag";
+    $config['news'][$nametype]['title_main'] = "Tag từ khóa";
     $config['news'][$nametype]['check'] = array("hienthi" => "Hiển thị");
     $config['news'][$nametype]['copy'] = true;
     $config['news'][$nametype]['desc'] = true;

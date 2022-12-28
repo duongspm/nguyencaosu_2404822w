@@ -615,6 +615,18 @@ NN_FRAMEWORK.peShiner = () => {
         api.resume();
     };
 };
+NN_FRAMEWORK.peShiner2 = () => {
+    if ($(".peShiner2").length) {
+        var api = $(".peShiner2").peShiner({
+            api: true,
+            paused: true,
+            reverse: true,
+            repeat: 1,
+            color: "oceanHL",
+        }); /*monoHL, oceanHL, fireHL*/
+        api.resume();
+    };
+};
 /* Cart */
 NN_FRAMEWORK.Cart = function(){
     /* Add */
@@ -847,6 +859,7 @@ $(document).ready(function(){
     NN_FRAMEWORK.TickerScroll();
     // NN_FRAMEWORK.DatePicker();
     NN_FRAMEWORK.peShiner();
+    NN_FRAMEWORK.peShiner2();
     NN_FRAMEWORK.SlickBlog();
     NN_FRAMEWORK.FlipsterVideo();
     NN_FRAMEWORK.flip();

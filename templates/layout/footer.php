@@ -6,8 +6,6 @@
                     <span><?=$footer['name'.$lang]?></span>
                 </div>
                 <div class="footer-info"><?= htmlspecialchars_decode($footer['content' . $lang]) ?></div>
-
-
             </div>
             <div class="footer-item">
                 <div class="footer-title">
@@ -52,35 +50,29 @@
             <span>tag từ khóa: </span>
             <?php if(!empty($tag)){
                 foreach($tag as $v){?>
-            <div class="tag__item">
-                <a href="<?=$v['desc'.$lang]?>" title="<?=$v['name'.$lang]?>">
-                    <?=$v['name'.$lang]?>
-                </a>
-            </div>
+
+            <a class="tag__item" href="<?=$v['desc'.$lang]?>" title="<?=$v['name'.$lang]?>">
+                <?=$v['name'.$lang]?>
+            </a>
+
             <?php }}?>
         </div>
     </div>
     <div class="copyright">
         <div class="wrapper copyrightt">
             <div class="copyright-left">
-                <span>Copyright © <span class="settingname">
+                <span>Copyright © 2022
+                    <span class="settingname">
                         <?=$setting['name'.$lang]?>
-                    </span>. Powered by Nina Co.,Ltd</span>
-            </div>
-            <div class="copyright-right">
-                <span><?= dangonline ?>: <?= $online ?></span>
-                <span>|</span>
-                <span><?= homnay ?>: <?= $counter['today'] ?></span>
-                <span>|</span>
-                <span><?= trongthang ?>: <?= $counter['month'] ?></span>
-                <span>|</span>
-                <span><?= tongtruycap ?>: <?= $counter['total'] ?></span>
+                    </span>. Design by Nina Co.,Ltd
+                </span>
             </div>
         </div>
     </div>
 </div>
-
+<?php if (!empty($optsetting['coords_iframe'])){?>
 <?= $addons->set('footer-map', 'footer-map', 6); ?>
+<?php }?>
 <?= $addons->set('messages-facebook', 'messages-facebook', 2); ?>
 
 <a class="btn-zalo btn-frame text-decoration-none" target="_blank"

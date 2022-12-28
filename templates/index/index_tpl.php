@@ -1,6 +1,6 @@
 <div class="doitac">
     <div class="doitacc">
-        <div class="owl-page owl-carousel owl-theme" data-xsm-items="2:10" data-sm-items="3:10" data-md-items="6:10"
+        <div class="owl-page owl-carousel owl-theme" data-xsm-items="4:10" data-sm-items="5:10" data-md-items="6:10"
             data-lg-items="7:10" data-xlg-items="9:10" data-rewind="1" data-autoplay="0" data-loop="0" data-lazyload="0"
             data-mousedrag="1" data-touchdrag="1" data-smartspeed="500" data-autoplayspeed="3500" data-dots="0"
             data-nav="0"
@@ -20,7 +20,7 @@
 <div class="tieuchi">
     <div class="wrapper">
         <div class="tieuchii">
-            <div class="owl-page owl-carousel owl-theme" data-xsm-items="2:0" data-sm-items="3:0" data-md-items="3:0"
+            <div class="owl-page owl-carousel owl-theme" data-xsm-items="1:0" data-sm-items="1:0" data-md-items="2:0"
                 data-lg-items="3:0" data-xlg-items="3:0" data-rewind="1" data-autoplay="0" data-loop="0"
                 data-lazyload="0" data-mousedrag="1" data-touchdrag="1" data-smartspeed="500" data-autoplayspeed="3500"
                 data-dots="0" data-nav="0"
@@ -289,7 +289,7 @@
             </div>
             <div class="blog__list">
                 <?php if (!empty($newsnb)) { ?>
-                <div class="owl-page owl-carousel owl-theme" data-xsm-items="2:5" data-sm-items="3:5"
+                <div class="owl-page owl-carousel owl-theme" data-xsm-items="1:5" data-sm-items="2:5"
                     data-md-items="3:15" data-lg-items="4:15" data-xlg-items="4:15" data-rewind="1" data-autoplay="0"
                     data-loop="0" data-lazyload="0" data-mousedrag="1" data-touchdrag="1" data-smartspeed="500"
                     data-autoplayspeed="3500" data-dots="0" data-nav="0"

@@ -1,8 +1,8 @@
 <div class="header">
     <div class="header__top">
         <div class="header__slogan">
-            <!-- marquee -->
-            <div class="">
+            <!--  -->
+            <div class="marquee">
                 <div>
                     <span>
                         <?=$sloganheader['name'.$lang]?>
